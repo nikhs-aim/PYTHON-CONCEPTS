@@ -71,8 +71,7 @@ class Employee:
         print("Good morning")
 
 
-nikhs = Employee()
-nikhs.greet()
+Employee.greet()
 
 
 # init method - this will run automatically, no need to call

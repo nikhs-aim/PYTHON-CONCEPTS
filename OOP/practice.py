@@ -131,3 +131,63 @@ if yes_or_no == 'yes':
     intercity.getStatus()
 else:
     sys.exit()
+
+
+# Define a base class Vehicle
+class Vehicle:
+    def __init__(self):
+        self.steering_wheel = True
+        self.accelerator = True
+        self.clutch = True
+        self.brakes = True
+
+    def start(self):
+        print("Starting the vehicle")
+
+# Define a class Car that inherits from Vehicle
+
+
+class Car(Vehicle):
+    def __init__(self):
+        super().__init__()
+        self.wheels = 4
+
+    def start(self):
+        super().start()
+        print("Car started")
+
+# Define a class Truck that inherits from Vehicle
+
+
+class Truck(Vehicle):
+    def __init__(self):
+        super().__init__()
+        self.wheels = 6
+
+    def start(self):
+        super().start()
+        print("Truck started")
+
+# Define a class Bus that inherits from Vehicle
+
+
+class Bus(Vehicle):
+    def __init__(self):
+        super().__init__()
+        self.wheels = 8
+
+    def start(self):
+        super().start()
+        print("Bus started")
+
+
+# Create instances of each class and call their start methods
+car = Car()
+truck = Truck()
+bus = Bus()
+
+car.start()
+truck.start()
+bus.start()
+print(bus.wheels)
+print(bus.steering_wheel)
